@@ -1,6 +1,13 @@
+
+
 #--------Internet Access Bar Control-------#
-accessStatus=2
+accessStatus=1
 dragDirection=
+statusArry=[Status_white,Status_block,Status_no]
+switchStatus=(accessStatus) ->
+	for s in statusArry
+		s.color="#999999"
+		statusArry[accessStatus].color="#4CD7A2"
 #------#
 btn_InternetBar.states=
 	block:
@@ -19,51 +26,46 @@ btn_InternetBar.draggable.enabled = true
 btn_InternetBar.draggable.vertical = false
 btn_InternetBar.draggable.overdrag = false
 btn_InternetBar.draggable.constraints =
-    x: 8
-    width: 614
+	x: 8
+	width: 614
+btn_InternetBar.onTapStart ->
+	this.scale=1.4
+btn_InternetBar.onTapEnd ->
+	this.scale=1
+	
+		
 btn_InternetBar.on Events.DragMove, ->
 	dragDirection=btn_InternetBar.draggable.direction
 btn_InternetBar.on Events.DragEnd, ->
 	if dragDirection is "left"
 		accessStatus-=1
-	else if dragDirection is "right" and accessStatus<3
+	else if dragDirection is "right" and accessStatus<2
 		accessStatus+=1
 	switch accessStatus
-		when 1
+		when 0	
+			switchStatus(accessStatus)
 			btn_InternetBar.animate("white")
-			Status_white.color="#4CD7A2"
-			Status_block.color="#999999"
-			Status_no.color="#999999"
-		when 2
+		when 1
+			switchStatus(accessStatus)
 			btn_InternetBar.animate("block")
-			Status_white.color="#999999"
-			Status_block.color="#4CD7A2"
-			Status_no.color="#999999"
-		when 3
+		when 2
+			switchStatus(accessStatus)
 			btn_InternetBar.animate("no")
-			Status_white.color="#999999"
-			Status_block.color="#999999"
-			Status_no.color="#4CD7A2"
 #--------#
 btn_white.onTapEnd ->
 	btn_InternetBar.animate("white")
-	Status_white.color="#4CD7A2"
-	Status_block.color="#999999"
-	Status_no.color="#999999"
-	accessStatus=1
+	accessStatus=0
+	switchStatus(accessStatus)
 btn_block.onTapEnd ->
 	btn_InternetBar.animate("block")
-	Status_white.color="#999999"
-	Status_block.color="#4CD7A2"
-	Status_no.color="#999999"
-	accessStatus=2
+	accessStatus=1
+	switchStatus(accessStatus)
 btn_no.onTapEnd ->
 	btn_InternetBar.animate("no")
-	Status_white.color="#999999"
-	Status_block.color="#999999"
-	Status_no.color="#4CD7A2"
-	accessStatus=3
+	accessStatus=2
+	switchStatus(accessStatus)
 #-------END---Internet Access Bar Control-------#
+
 
 #-----Switch Kid-----#
 tab_2.opacity=.5
@@ -83,17 +85,24 @@ kidProfile=(name,today1,today2,week1,week2) ->
 	week_m.text=week1
 	week_h.text=week2
 tab_1.onTap ->
+	accessStatus=1
+	switchStatus(accessStatus)
+	btn_InternetBar.stateSwitch("block")
 	tab_bg.animate("a")
 	this.opacity=1
 	tab_2.opacity=.5
 	kidProfile("Jayden",33,2,51,12)
 
 tab_2.onTap ->
+	accessStatus=2
+	switchStatus(accessStatus)
+	btn_InternetBar.stateSwitch("no")
 	tab_bg.animate("b")
 	this.opacity=1
 	tab_1.opacity=.5
-	kidProfile("jimmy",47,2,14,13)
+	kidProfile("Tommy",47,2,14,13)
 #-----END Switch Kid-----#	
+
 
 #-----Screentime-----#
 screenTime_W.opacity=.5

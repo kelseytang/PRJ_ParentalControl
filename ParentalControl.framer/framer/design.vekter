@@ -2290,7 +2290,7 @@
                     "brightness" : 100,
                     "bottom" : 63,
                     "borderTop" : 1,
-                    "targetName" : null,
+                    "targetName" : "btn_mgmApps",
                     "radiusBottomRight" : 5,
                     "hueRotateEnabled" : 0
                   },
@@ -3085,32 +3085,32 @@
                               "depth" : 0,
                               "inlineStyleRanges" : [
                                 {
-                                  "length" : 15,
+                                  "length" : 17,
                                   "style" : "FONT:__SF-UI-Text-Regular__",
                                   "offset" : 0
                                 },
                                 {
-                                  "length" : 15,
+                                  "length" : 17,
                                   "style" : "SIZE:16",
                                   "offset" : 0
                                 },
                                 {
-                                  "length" : 15,
+                                  "length" : 17,
                                   "style" : "LETTERSPACING:0",
                                   "offset" : 0
                                 },
                                 {
-                                  "length" : 15,
+                                  "length" : 17,
                                   "style" : "LINEHEIGHT:1.2",
                                   "offset" : 0
                                 },
                                 {
-                                  "length" : 15,
+                                  "length" : 17,
                                   "style" : "COLOR:rgba(153, 153, 153, 1.00)",
                                   "offset" : 0
                                 },
                                 {
-                                  "length" : 15,
+                                  "length" : 17,
                                   "style" : "ALIGN:center",
                                   "offset" : 0
                                 }
@@ -3128,7 +3128,7 @@
                                   "ALIGN:center"
                                 ]
                               },
-                              "text" : "Block Blacklist",
+                              "text" : "Block Blacklisted",
                               "key" : "6lv32",
                               "type" : "unstyled"
                             }
@@ -3169,7 +3169,7 @@
                         "blur" : 12,
                         "autoSize" : true,
                         "invertEnabled" : 0,
-                        "width" : 111,
+                        "width" : 130,
                         "brightness" : 100
                       },
                       {
@@ -3584,7 +3584,7 @@
                         "children" : [
 
                         ],
-                        "centerAnchorX" : 0.4992088607594937,
+                        "centerAnchorX" : 0.5007911392405063,
                         "id" : "~8-gcc!\/",
                         "exportOptions" : [
 
@@ -3596,7 +3596,7 @@
                         "widthFactor" : null,
                         "blendingEnabled" : 0,
                         "grayscale" : 0,
-                        "top" : 61,
+                        "top" : 56,
                         "saturate" : 100,
                         "left" : null,
                         "locked" : false,
@@ -3620,7 +3620,7 @@
                         "name" : "btn_block",
                         "blendingMode" : "normal",
                         "contrast" : 100,
-                        "centerAnchorY" : 0.296875,
+                        "centerAnchorY" : 0.27734375,
                         "height" : 30,
                         "borderWidth" : 1,
                         "hueRotate" : 0,
@@ -3934,7 +3934,16 @@
             "parentid" : "asH={C6&",
             "radiusBottomLeft" : 0,
             "boxShadows" : [
-
+              {
+                "x" : 0,
+                "color" : "rgba(0,0,0,0.25)",
+                "enabled" : true,
+                "y" : 2,
+                "spread" : 0,
+                "__class" : "BoxShadow",
+                "inset" : false,
+                "blur" : 5
+              }
             ],
             "contrastEnabled" : 0,
             "borderEnabled" : 0,
@@ -3954,6 +3963,83 @@
             "bottom" : 0,
             "borderTop" : 1,
             "targetName" : "home_kid_1",
+            "radiusBottomRight" : 0,
+            "hueRotateEnabled" : 0
+          },
+          {
+            "radius" : 0,
+            "children" : [
+
+            ],
+            "centerAnchorX" : 0.5439453125,
+            "id" : "leg+nu;k",
+            "exportOptions" : [
+
+            ],
+            "grayScaleEnabled" : 0,
+            "constraintsLocked" : true,
+            "blurType" : "layer",
+            "fillColor" : "hsl(180, 47%, 41%)",
+            "widthFactor" : null,
+            "blendingEnabled" : 0,
+            "grayscale" : 0,
+            "top" : 0,
+            "saturate" : 100,
+            "left" : null,
+            "locked" : false,
+            "sepiaEnabled" : 0,
+            "fillGradient" : {
+              "end" : "rgba(0,0,0,0)",
+              "alpha" : 1,
+              "angle" : 0,
+              "__class" : "LinearGradient",
+              "start" : "black"
+            },
+            "blur" : 12,
+            "radiusTopLeft" : 0,
+            "sepia" : 0,
+            "borderColor" : "#222",
+            "rotation" : 0,
+            "borderLeft" : 1,
+            "fillEnabled" : false,
+            "right" : 0,
+            "opacity" : 1,
+            "name" : "content",
+            "blendingMode" : "normal",
+            "contrast" : 100,
+            "centerAnchorY" : 0.5,
+            "height" : 768,
+            "borderWidth" : 1,
+            "hueRotate" : 0,
+            "borderStyle" : "solid",
+            "brightnessEnabled" : 0,
+            "borderPerSide" : false,
+            "saturateEnabled" : 0,
+            "aspectRatioLocked" : false,
+            "borderRight" : 1,
+            "parentid" : "asH={C6&",
+            "radiusBottomLeft" : 0,
+            "boxShadows" : [
+
+            ],
+            "contrastEnabled" : 0,
+            "borderEnabled" : 0,
+            "radiusPerCorner" : false,
+            "radiusTopRight" : 0,
+            "invert" : 0,
+            "__class" : "RectangleNode",
+            "clip" : false,
+            "visible" : false,
+            "fillType" : "color",
+            "invertEnabled" : 0,
+            "heightFactor" : null,
+            "width" : 934,
+            "borderBottom" : 1,
+            "blurEnabled" : 0,
+            "brightness" : 100,
+            "bottom" : 0,
+            "borderTop" : 1,
+            "targetName" : "content",
             "radiusBottomRight" : 0,
             "hueRotateEnabled" : 0
           },
@@ -4102,6 +4188,80 @@
             "bottom" : 0,
             "borderTop" : 1,
             "targetName" : "navBar",
+            "radiusBottomRight" : 0,
+            "brightness" : 100
+          },
+          {
+            "radius" : 0,
+            "hueRotateEnabled" : 0,
+            "children" : [
+
+            ],
+            "centerAnchorX" : 0.5,
+            "id" : "F4sw2ONN",
+            "exportOptions" : [
+
+            ],
+            "grayScaleEnabled" : 0,
+            "constraintsLocked" : false,
+            "blurType" : "layer",
+            "fillColor" : "transparent",
+            "widthFactor" : null,
+            "blendingEnabled" : 0,
+            "grayscale" : 0,
+            "top" : 0,
+            "saturate" : 100,
+            "left" : 0,
+            "locked" : false,
+            "sepiaEnabled" : 0,
+            "blur" : 12,
+            "sepia" : 0,
+            "radiusTopLeft" : 0,
+            "borderColor" : "#222",
+            "rotation" : 0,
+            "image" : "COdkmdgOZt1ueG8XLSk9ke9qgpqmZ7jMeDpXeeZaw5OM00zOodWvvU8H9OSAXPl274eqkb3xJySEExakjRw.png",
+            "borderLeft" : 1,
+            "fillEnabled" : false,
+            "right" : 0,
+            "opacity" : 1,
+            "name" : "screen_black",
+            "blendingMode" : "normal",
+            "originalFilename" : "3_BlackList.png",
+            "contrast" : 100,
+            "centerAnchorY" : 0.5,
+            "height" : 768,
+            "borderWidth" : 1,
+            "hueRotate" : 0,
+            "borderStyle" : "solid",
+            "brightnessEnabled" : 0,
+            "borderPerSide" : false,
+            "imageBackgroundSize" : "Cover",
+            "aspectRatioLocked" : true,
+            "borderRight" : 1,
+            "saturateEnabled" : 0,
+            "parentid" : "asH={C6&",
+            "intrinsicWidth" : 1024,
+            "radiusBottomLeft" : 0,
+            "boxShadows" : [
+
+            ],
+            "contrastEnabled" : 0,
+            "borderEnabled" : 0,
+            "radiusPerCorner" : false,
+            "radiusTopRight" : 0,
+            "invert" : 0,
+            "__class" : "ImageNode",
+            "clip" : false,
+            "visible" : false,
+            "invertEnabled" : 0,
+            "heightFactor" : null,
+            "width" : 1024,
+            "borderBottom" : 1,
+            "intrinsicHeight" : 768,
+            "blurEnabled" : 0,
+            "bottom" : null,
+            "borderTop" : 1,
+            "targetName" : "screen_black",
             "radiusBottomRight" : 0,
             "brightness" : 100
           }

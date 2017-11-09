@@ -1,6 +1,6 @@
 {
   "orientation" : 90,
-  "updateDelay" : 0.3,
+  "updateDelay" : 5,
   "designModeSelected" : 0,
   "cachedDeviceHeight" : 768,
   "contentScale" : 1,
@@ -16,9 +16,9 @@
   "selectedHand" : "",
   "showBezel" : true,
   "foldedCodeRanges" : [
-    "{0, 1644}",
-    "{1645, 514}",
-    "{2160, 612}"
+    "{2, 1530}",
+    "{1534, 676}",
+    "{2211, 612}"
   ],
   "deviceScale" : "fit"
 }
