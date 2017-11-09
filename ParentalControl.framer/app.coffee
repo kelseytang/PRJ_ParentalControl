@@ -1,9 +1,7 @@
+#--------Internet Access Bar Control-------#
 accessStatus=2
-if accessStatus is 2
-	Status_block.color="#4CD7A2"
-
 dragDirection=
-
+#------#
 btn_InternetBar.states=
 	block:
 		x:291
@@ -17,8 +15,6 @@ btn_InternetBar.states=
 		x:576
 		animationOptions:
 			time:.4
-
-
 btn_InternetBar.draggable.enabled = true
 btn_InternetBar.draggable.vertical = false
 btn_InternetBar.draggable.overdrag = false
@@ -48,6 +44,7 @@ btn_InternetBar.on Events.DragEnd, ->
 			Status_white.color="#999999"
 			Status_block.color="#999999"
 			Status_no.color="#4CD7A2"
+#--------#
 btn_white.onTapEnd ->
 	btn_InternetBar.animate("white")
 	Status_white.color="#4CD7A2"
@@ -66,12 +63,9 @@ btn_no.onTapEnd ->
 	Status_block.color="#999999"
 	Status_no.color="#4CD7A2"
 	accessStatus=3
+#-------END---Internet Access Bar Control-------#
 
-
-
-
-
-screenTime_W.opacity=.5
+#-----Switch Kid-----#
 tab_2.opacity=.5
 tab_bg.states=
 	a:
@@ -99,9 +93,10 @@ tab_2.onTap ->
 	this.opacity=1
 	tab_1.opacity=.5
 	kidProfile("jimmy",47,2,14,13)
-	
+#-----END Switch Kid-----#	
 
-
+#-----Screentime-----#
+screenTime_W.opacity=.5
 screenTime_pgComp = new PageComponent
 	width: profile_1.width
 	y: 264
@@ -125,3 +120,4 @@ screenTime_pgComp.on "change:currentPage", ->
 		dot_2.opacity=.5
 		screenTime_W.opacity=.4
 		screenTime_D.opacity=1
+#-----END Screentime-----#
